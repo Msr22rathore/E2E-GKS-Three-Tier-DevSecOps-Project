@@ -1,0 +1,18 @@
+# Terraform plugin directory (auto-downloaded)
+.terraform/
+
+# Terraform state files (sensitive data)
+*.tfstate
+*.tfstate.backup
+
+# Crash logs and CLI logs
+crash.log
+*.log
+
+# Terraform plan output (optional)
+*.tfplan
+
+# Ignore GCP credentials
+
+tf/files/jenkins/gcp/creds/*.json
+
