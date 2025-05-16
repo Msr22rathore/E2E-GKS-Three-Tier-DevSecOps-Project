@@ -25,10 +25,10 @@ spec:
       - name: gcp-registry-secret
       containers:
       - name: frontend
-        image: us-central1-docker.pkg.dev/axial-psyche-453016-h3/frontend/frontend:latest
+        image: us-central1-docker.pkg.dev/axial-psyche-453016-h3/frontend/frontend:1
         imagePullPolicy: Always
         env:
           - name: REACT_APP_BACKEND_URL
-            value: "<lb-dns>/api/tasks"
+            value: "http://api:3500/api/tasks"
         ports:
         - containerPort: 3000

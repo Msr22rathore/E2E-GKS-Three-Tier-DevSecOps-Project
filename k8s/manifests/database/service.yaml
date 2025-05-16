@@ -11,3 +11,4 @@ spec:
     protocol: TCP
     port: 27017
     targetPort: 27017
+  type: ClusterIP  # Default type, can be omitted or explicitly defined
