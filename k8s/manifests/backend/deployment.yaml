@@ -25,7 +25,7 @@ spec:
       - name: gcp-registry-secret
       containers:
       - name: api
-        image: us-central1-docker.pkg.dev/axial-psyche-453016-h3/backend/backend:4
+        image: us-central1-docker.pkg.dev/axial-psyche-453016-h3/backend/backend:9
         imagePullPolicy: Always
         env:
           - name: MONGO_CONN_STR
