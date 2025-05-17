@@ -3,13 +3,14 @@ WORKDIR /usr/src/app
 
 COPY app/frontend/package*.json ./
 RUN npm install
-COPY app/frontend/. .
+COPY app/frontend/. .  
 
 FROM node:14.0.0-alpine
 WORKDIR /app
 COPY --from=frontend /usr/src/app/package*.json ./
 COPY --from=frontend /usr/src/app/node_modules ./node_modules
 
-COPY --from=frontend /usr/src/app/public .
-COPY --from=frontend /usr/src/app/src .
+COPY --from=frontend /usr/src/app/public ./public
+COPY --from=frontend /usr/src/app/src ./src
+
 CMD ["npm", "start"]
